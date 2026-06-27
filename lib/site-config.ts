@@ -7,7 +7,7 @@ export const siteConfig = {
   description:
     "Premium plots, flats & investment opportunities across Pune — backed by clear titles, transparent documentation, and two decades of disciplined development.",
   social: {
-    facebook: "https://www.facebook.com/",
+    facebook: "https://www.facebook.com/share/1GfXU5jZow/?mibextid=wwXIfr",
     instagram: "https://www.instagram.com/?hl=en",
     youtube: "https://www.youtube.com/@UdyamiInfra",
     linkedin: "https://linkedin.com",
