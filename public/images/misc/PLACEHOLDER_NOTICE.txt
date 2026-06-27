@@ -1,0 +1,11 @@
+REQUIRED IMAGES — Place these in /public/images/misc/
+
+1. hero-poster.jpg     → Hero section background (landscape, min 1920x1080)
+2. logo-emblem.png     → Logo/emblem (transparent PNG, ~200x200)
+3. founder.jpg         → Founder circular profile photo (square, min 400x400)
+4. avatar-1.jpg        → Testimonial avatar 1
+5. avatar-2.jpg        → Testimonial avatar 2
+6. avatar-3.jpg        → Testimonial avatar 3
+7. avatar-4.jpg        → Testimonial avatar 4
+
+All project images are already in /public/images/projects/
