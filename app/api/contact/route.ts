@@ -140,7 +140,9 @@ export async function POST(req: NextRequest) {
     if (!resendRes.ok) {
   const errText = await resendRes.text();
 
-  console.error("[Contact API] Resend error:", errText);
+  console.error("========== RESEND ERROR ==========");
+  console.error(errText);
+  console.error("=================================");
 
   return NextResponse.json(
     {
@@ -155,8 +157,12 @@ return NextResponse.json({ success: true }, { status: 200 });
 
 } catch (err) {
   console.error("[Contact API Error]", err);
+
   return NextResponse.json(
-    { error: "Internal server error" },
+    {
+      success: false,
+      error: String(err),
+    },
     { status: 500 }
   );
 }
