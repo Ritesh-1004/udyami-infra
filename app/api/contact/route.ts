@@ -138,14 +138,26 @@ export async function POST(req: NextRequest) {
     });
 
     if (!resendRes.ok) {
-      const err = await resendRes.json();
-      console.error("[Contact API] Resend error:", err);
-      return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
-    }
+  const errText = await resendRes.text();
 
-    return NextResponse.json({ success: true }, { status: 200 });
-  } catch (err) {
-    console.error("[Contact API Error]", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
-  }
+  console.error("[Contact API] Resend error:", errText);
+
+  return NextResponse.json(
+    {
+      success: false,
+      error: errText,
+    },
+    { status: 500 }
+  );
+}
+
+return NextResponse.json({ success: true }, { status: 200 });
+
+} catch (err) {
+  console.error("[Contact API Error]", err);
+  return NextResponse.json(
+    { error: "Internal server error" },
+    { status: 500 }
+  );
+}
 }
