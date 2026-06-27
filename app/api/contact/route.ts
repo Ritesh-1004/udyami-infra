@@ -131,7 +131,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: "Udyami Infra Website <onboarding@resend.dev>",
         to: [ADMIN_EMAIL],
-        reply_to: email,
+        reply_to: ADMIN_EMAIL,
         subject: `New Enquiry — ${name} (${propertyInterest || "General"}) — Udyami Infra Foundation`,
         html: emailHtml,
       }),
